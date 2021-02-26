@@ -46,20 +46,15 @@ class KelurahanController extends Controller
     {
         //validasi
         $request->validate([
-            'kode_kelurahan' => 'required|max:4|unique:kelurahans',
             'nama_kelurahan' => 'required|unique:kelurahans',
         ],
         [
-            'kode_kelurahan.required' => 'Kode Harus di Isi',
-            'kode_kelurahan.max' => 'Kode Maksimal 4 Nomer',
-            'kode_kelurahan.unique' => 'Kode Sudah Dipakai',
             'nama_kelurahan.required' => 'Nama Kelurahan Harus di Isi',
             'nama_kelurahan.unique' => 'Nama Kelurahan Sudah Dipakai',
         ]);
 
         $kelurahan = new Kelurahan();
         $kelurahan->id_kecamatan = $request->id_kecamatan;
-        $kelurahan->kode_kelurahan = $request->kode_kelurahan;
         $kelurahan->nama_kelurahan = $request->nama_kelurahan;
         $kelurahan->save();
         return redirect()->route('kelurahan.index');
@@ -101,7 +96,6 @@ class KelurahanController extends Controller
     {
         $kelurahan = Kelurahan::findOrFail($id);
         $kelurahan->id_kecamatan = $request->id_kecamatan;
-        $kelurahan->kode_kelurahan = $request->kode_kelurahan;
         $kelurahan->nama_kelurahan = $request->nama_kelurahan;
         $kelurahan->save();
         return redirect()->route('kelurahan.index');

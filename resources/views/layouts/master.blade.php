@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>trackingcovid</title>
+  <title>covid-19</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -44,20 +44,8 @@
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1 class="m-0 text-dark"></h1>
-          </div><!-- /.col -->
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Dashboard v1</li>
-            </ol>
-          </div><!-- /.col -->
-        </div><!-- /.row -->
       </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content-header -->
+    </div><!-- /.content-header -->
 
     <!-- Main content -->
     <section class="content">
@@ -69,20 +57,13 @@
   </div>
   <!-- /.content-wrapper -->
 
+  <!-- Footer -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong>
-    All rights reserved.
-    <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 3.0.4
+    <div class="copyright">
+      &copy; Copyright <strong><span>Rofi Fadilah</span></strong>. All Rights Reserved
     </div>
   </footer>
-
-  <!-- <footer class="main-footer">
-    <strong>Covid-19 &copy; 2019-2021 Tracking Covid-19</a></strong>
-    <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 3.0.4
-    </div>
-  </footer> -->
+  <!-- /.Footer -->
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">

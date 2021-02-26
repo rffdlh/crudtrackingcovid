@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', function () {
-    return view('welcome');
+    return view('frontend.welcome');
 });
 
 Auth::routes();
@@ -60,4 +60,6 @@ Route::resource('rw', RwController::class);
 use App\Http\Controllers\Kasus1Controller;
 Route::resource('kasus1', Kasus1Controller::class);
 
-// Route::view('provinsi-kasus1','kasus1.create');
+//Front End
+use App\Http\Controllers\FrontEndController;
+Route::resource('/', FrontEndController::class);

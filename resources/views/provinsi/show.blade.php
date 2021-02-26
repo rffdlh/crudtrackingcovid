@@ -5,22 +5,22 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Show Data Provinsi') }}</div>
+                <div class="card-header">{{ __('SHOW DATA PROVINSI') }}</div>
 
                 <div class="card-body">
                     <form action="" method="POST">
                         @csrf
                         @method('PATCH')
                         <div class="mb-3">
-                            <label class="form-label">Kode Provinsi</label>
+                            <label class="form-label">KODE PROVINSI</label>
                             <input type="text" name="kode_provinsi" value="{{$provinsi->kode_provinsi}}" class="form-control" readonly>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Provinsi</label>
+                            <label class="form-label">PROVINSI</label>
                             <input type="text" name="nama_provinsi" value="{{$provinsi->nama_provinsi}}" class="form-control" readonly>
                         </div>
                         <div class="mb-3">
-                            <a href="{{ url()->previous() }}" class="float-left btn btn-outline-primary">Kembali</a>
+                            <a href="{{ url()->previous() }}" class="float-left btn btn-outline-primary">KEMBALI</a>
                         </div>
                     </form>
                 </div>

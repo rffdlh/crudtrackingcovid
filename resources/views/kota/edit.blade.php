@@ -5,14 +5,14 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Edit Data Kota') }}</div>
+                <div class="card-header">{{ __('EDIT DATA KOTA') }}</div>
 
                 <div class="card-body">
                     <form action="{{route('kota.update', $kota->id)}}" method="POST">
                         @csrf
                         @method('PATCH')
                         <div class="mb-3">
-                            <label class="form-label">Provinsi</label>
+                            <label class="form-label">PROVINSI</label>
                             <select name="id_provinsi" class="form-control" required>
                                 @foreach($provinsi as $data)
                                 <option value="{{$data->id}}"
@@ -23,14 +23,14 @@
                             </select>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Kode Kota</label>
+                            <label class="form-label">KODE KOTA</label>
                             <input type="text" name="kode_kota" value="{{$kota->kode_kota}}" class="form-control" required>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Kota</label>
+                            <label class="form-label">KOTA</label>
                             <input type="text" name="nama_kota" value="{{$kota->nama_kota}}" class="form-control" required>
                         </div>
-                        <button type="submit" class="float-left btn btn-outline-primary">Simpan</button>
+                        <button type="submit" class="float-left btn btn-outline-primary">SIMPAN</button>
                     </form>
                 </div>
             </div>

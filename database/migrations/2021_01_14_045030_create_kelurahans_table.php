@@ -15,7 +15,6 @@ class CreateKelurahansTable extends Migration
     {
         Schema::create('kelurahans', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('kode_kelurahan');
             $table->string('nama_kelurahan');
             $table->unsignedBigInteger('id_kecamatan');
             $table->foreign('id_kecamatan')->references('id')

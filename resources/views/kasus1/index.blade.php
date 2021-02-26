@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-16">
             <div class="card">
-                <div class="card-header">{{ __('Kasus') }}</div>
+                <div class="card-header">{{ __('KASUS') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,18 +14,18 @@
                         </div>
                     @endif
 
-                <a href="{{route('kasus1.create')}}" class="float-right btn btn-outline-primary">Tambah</a>
+                <a href="{{route('kasus1.create')}}" class="float-right btn btn-outline-primary">TAMBAH</a>
                     <table class="table">
                         <thead>
                             <tr>
-                                <th scope="col">No</th>
-                                <th scope="col">Lokasi</th>
-                                <th scope="col">Rw</th>
-                                <th scope="col">Positif</th>
-                                <th scope="col">Sembuh</th>
-                                <th scope="col">Meninggal</th>
-                                <th scope="col">Tanggal</th>
-                                <th scope="col">Action</th>
+                                <th scope="col">NO</th>
+                                <th scope="col">LOKASI</th>
+                                <th scope="col">RW</th>
+                                <th scope="col">POSITIF</th>
+                                <th scope="col">SEMBUH</th>
+                                <th scope="col">MENINGGAL</th>
+                                <th scope="col">TANGGAL</th>
+                                <th scope="col">ACTION</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -33,10 +33,10 @@
                         @foreach($kasus1 as $data)
                             <tr>
                                 <th scope="row">{{$no++}}</th>
-                                <td>Kelurahan : {{$data->rw->kelurahan->nama_kelurahan}}<br>
-                                            Kecamatan : {{$data->rw->kelurahan->kecamatan->nama_kecamatan}}<br>
-                                            Kota : {{$data->rw->kelurahan->kecamatan->kota->nama_kota}}<br>
-                                            Provinsi : {{$data->rw->kelurahan->kecamatan->kota->provinsi->nama_provinsi}}
+                                <td>KELURAHAN : {{$data->rw->kelurahan->nama_kelurahan}}<br>
+                                    KECAMATAN : {{$data->rw->kelurahan->kecamatan->nama_kecamatan}}<br>
+                                    KOTA : {{$data->rw->kelurahan->kecamatan->kota->nama_kota}}<br>
+                                    PROVINSI : {{$data->rw->kelurahan->kecamatan->kota->provinsi->nama_provinsi}}
                                 </td>
                                 <td>{{ $data->rw->rw }}</td>
                                 <td>{{ $data->jumlah_positif }}</td>
@@ -47,10 +47,10 @@
                                     <form action="{{route('kasus1.destroy',$data->id)}}"  method="post">
                                         @csrf
                                         @method('DELETE')
-                                        <a href="{{route('kasus1.show',$data->id)}}" class="float btn btn-outline-success">Show</a> |
-                                        <a href="{{route('kasus1.edit',$data->id)}}" class="float btn btn-outline-warning">Edit</a> |
+                                        <a href="{{route('kasus1.show',$data->id)}}" class="float btn btn-outline-success">SHOW</a> |
+                                        <a href="{{route('kasus1.edit',$data->id)}}" class="float btn btn-outline-warning">EDIT</a> |
                                         <button type="submit" class="float btn btn-outline-danger" onclick="return confirm('Apakah Anda Yakin ?')">
-                                            Delete
+                                            DELETE
                                         </button>
                                     </form>
                                 </td>

@@ -46,20 +46,15 @@ class KecamatanController extends Controller
     {
         //validasi
         $request->validate([
-            'kode_kecamatan' => 'required|max:4|unique:kecamatans',
             'nama_kecamatan' => 'required|unique:kecamatans',
         ],
         [
-            'kode_kota.required' => 'Kode Harus di Isi',
-            'kode_kota.max' => 'Kode Maksimal 4 Nomer',
-            'kode_kota.unique' => 'Kode Sudah Dipakai',
             'nama_kota.required' => 'Nama Kecamatan Harus di Isi',
             'nama_kota.unique' => 'Nama Kecamatan Sudah Dipakai',
         ]);
 
         $kecamatan = new Kecamatan();
         $kecamatan->id_kota = $request->id_kota;
-        $kecamatan->kode_kecamatan = $request->kode_kecamatan;
         $kecamatan->nama_kecamatan = $request->nama_kecamatan;
         $kecamatan->save();
         return redirect()->route('kecamatan.index');
@@ -101,7 +96,6 @@ class KecamatanController extends Controller
     {
         $kecamatan = Kecamatan::findOrFail($id);
         $kecamatan->id_kota = $request->id_kota;
-        $kecamatan->kode_kecamatan = $request->kode_kecamatan;
         $kecamatan->nama_kecamatan = $request->nama_kecamatan;
         $kecamatan->save();
         return redirect()->route('kecamatan.index');

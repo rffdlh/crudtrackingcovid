@@ -3,9 +3,9 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-16">
             <div class="card">
-                <div class="card-header">{{ __('Provinsi') }}</div>
+                <div class="card-header">{{ __('PROVINSI') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,14 +14,14 @@
                         </div>
                     @endif
 
-                <a href="{{route('provinsi.create')}}" class="float-right btn btn-outline-primary">Tambah</a>
+                <a href="{{route('provinsi.create')}}" class="float-right btn btn-outline-primary">TAMBAH</a>
                     <table class="table">
                         <thead>
                             <tr>
-                                <th scope="col">No</th>
-                                <th scope="col">Kode Provinsi</th>
-                                <th scope="col">Provinsi</th>
-                                <th scope="col">Action</th>
+                                <th scope="col">NO</th>
+                                <th scope="col">KODE PROVINSI</th>
+                                <th scope="col">PROVINSI</th>
+                                <th scope="col">ACTION</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -35,10 +35,10 @@
                                     <form action="{{route('provinsi.destroy',$data->id)}}"  method="post">
                                         @csrf
                                         @method('DELETE')
-                                        <a href="{{route('provinsi.show',$data->id)}}" class="float btn btn-outline-success">Show</a> |
-                                        <a href="{{route('provinsi.edit',$data->id)}}" class="float btn btn-outline-warning">Edit</a> |
+                                        <a href="{{route('provinsi.show',$data->id)}}" class="float btn btn-outline-success">SHOW</a> |
+                                        <a href="{{route('provinsi.edit',$data->id)}}" class="float btn btn-outline-warning">EDIT</a> |
                                         <button type="submit" class="float btn btn-outline-danger" onclick="return confirm('Apakah Anda Yakin ?')">
-                                            Delete
+                                            DELETE
                                         </button>
                                     </form>
                                 </td>

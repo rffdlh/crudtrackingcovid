@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-16">
             <div class="card">
-                <div class="card-header">{{ __('Kelurahan') }}</div>
+                <div class="card-header">{{ __('KELURAHAN') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,15 +14,14 @@
                         </div>
                     @endif
 
-                <a href="{{route('kelurahan.create')}}" class="float-right btn btn-outline-primary">Tambah</a>
+                <a href="{{route('kelurahan.create')}}" class="float-right btn btn-outline-primary">TAMBAH</a>
                     <table class="table">
                         <thead>
                             <tr>
-                                <th scope="col">No</th>
-                                <th scope="col">Kecamatan</th>
-                                <th scope="col">Kode Kelurahan</th>
-                                <th scope="col">Kelurahan</th>
-                                <th scope="col">Action</th>
+                                <th scope="col">NO</th>
+                                <th scope="col">KECAMATAN</th>
+                                <th scope="col">KELURAHAN</th>
+                                <th scope="col">ACTION</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -31,16 +30,15 @@
                             <tr>
                                 <th scope="row">{{$no++}}</th>
                                 <td>{{ $data->kecamatan->nama_kecamatan }}</td>
-                                <td>{{ $data->kode_kelurahan }}</td>
                                 <td>{{ $data->nama_kelurahan }}</td>
                                 <td>
                                     <form action="{{route('kelurahan.destroy',$data->id)}}"  method="post">
                                         @csrf
                                         @method('DELETE')
-                                        <a href="{{route('kelurahan.show',$data->id)}}" class="float btn btn-outline-success">Show</a> |
-                                        <a href="{{route('kelurahan.edit',$data->id)}}" class="float btn btn-outline-warning">Edit</a> |
+                                        <a href="{{route('kelurahan.show',$data->id)}}" class="float btn btn-outline-success">SHOW</a> |
+                                        <a href="{{route('kelurahan.edit',$data->id)}}" class="float btn btn-outline-warning">EDIT</a> |
                                         <button type="submit" class="float btn btn-outline-danger" onclick="return confirm('Apakah Anda Yakin ?')">
-                                            Delete
+                                            DELETE
                                         </button>
                                     </form>
                                 </td>
