@@ -15,9 +15,9 @@ class CreateKasus1sTable extends Migration
     {
         Schema::create('kasus1s', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('jumlah_positif');
-            $table->string('jumlah_sembuh');
-            $table->string('jumlah_meninggal');
+            $table->integer('jumlah_positif');
+            $table->integer('jumlah_sembuh');
+            $table->integer('jumlah_meninggal');
             $table->date('tanggal');
             $table->unsignedBigInteger('id_rw');
             $table->foreign('id_rw')->references('id')
