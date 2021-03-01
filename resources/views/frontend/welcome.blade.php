@@ -32,7 +32,7 @@
         <li><a class="nav-link scrollto active" href="#hero">UTAMA</a></li>
         <li><a class="nav-link scrollto" href="#pricing">INDONESIA</a></li>
         <li><a class="nav-link scrollto" href="#services">PROVINSI</a></li>
-        <li><a class="nav-link scrollto" href="#resume">GLOBAL</a></li>
+        <!-- <li><a class="nav-link scrollto" href="#resume">GLOBAL</a></li> -->
         <li class="dropdown"><a href="#"><span>MASUK</span><i class="bi bi-chevron-down"></i></a>
           <ul>
           @if (Route::has('login'))
@@ -143,46 +143,7 @@
     </section>
     <!-- End Provinsi Section -->
 
-    <!-- ======= Global Section ======= -->
-    <section id="resume" class="resume">
-    <div class="container">
-      <div class="section-title">
-        <span>Data Coronavirus Berdasarkan Global</span>
-        <h2>Data Kasus Coronavirus Berdasarkan Global</h2>
-      </div>
-      <div class="card-body">
-        <div class="table-responsive">
-        <?php
-          $data = file_get_contents('https://api.kawalcorona.com');
-          $negara = json_decode($data, true);
-        ?>
-        <table class="table table-bordered" width="100%" cellspacing="0">
-        <thead>
-        <tr>
-            <th scope="col"><center>NO</center></th>
-            <th scope="col"><center>NEGARA</center></th>
-            <th scope="col"><center>JUMLAH POSITIF</center></th>
-            <th scope="col"><center>JUMLAH SEMBUH</center></th>
-            <th scope="col"><center>JUMLAH MENINGGAL</center></th>
-          </tr>
-        </thead>
-        <tbody>
-          @php $no=1; @endphp
-          @foreach ($negara as $data)
-          <tr>
-            <td scope="row"><center>{{$no++}}</center></td>
-            <td scope="row"><center>{{$data['attributes']['Country_Region']}}</center></td>
-            <td scope="row"><center>{{$data['attributes']['Confirmed']}}</center></td>
-            <td scope="row"><center>{{$data['attributes']['Recovered']}}</center></td>
-            <td scope="row"><center>{{$data['attributes']['Deaths']}}</center></td>
-          </tr>
-          @endforeach
-        </tbody>
-        </table>
-        </div>
-      </div>
-    </div>
-    </section>
+    
     <!-- End Global Section -->
   </main>
   <!-- End Main -->

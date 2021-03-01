@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\Models\Country;
+// use App\Models\Country;
 
 class FrontEndController extends Controller
 {
@@ -34,7 +34,7 @@ class FrontEndController extends Controller
             ->select('kasus1s.jumlah_positif','kasus1s.jumlah_sembuh','kasus1s.jumlah_meninggal')
             ->join('kasus1s','rws.id','=','kasus1s.id_rw')
             ->sum('kasus1s.jumlah_meninggal');
-        $negara = Country::all();
-        return view('frontend.welcome', compact('provinsi','positif','sembuh','meninggal','negara'));
+        // $negara = Country::all();
+        return view('frontend.welcome', compact('provinsi','positif','sembuh','meninggal'));
     }
 }
